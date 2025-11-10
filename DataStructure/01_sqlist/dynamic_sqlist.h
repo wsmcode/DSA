@@ -17,6 +17,7 @@ public:
             push_back(item);
         }
     }
+    ~DynamicSqlist() { delete[] data_; }
     // 增
     // 尾插 O(1)
     template<typename U, typename = typename std::enable_if<std::is_convertible<U, T>::value>::type>
